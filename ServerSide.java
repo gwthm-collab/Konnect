@@ -17,7 +17,7 @@ public class ServerSide extends Thread{
                 System.out.println("Connected to "+server.getRemoteSocketAddress());
                 DataInputStream input = new DataInputStream(server.getInputStream());
                 System.out.println(input.readUTF());
-
+				//Print the message from Server
                 DataOutputStream op = new DataOutputStream(server.getOutputStream());
                 op.writeUTF("Successful message from "+ server.getLocalSocketAddress());
                 server.close();
